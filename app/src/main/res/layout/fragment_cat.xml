@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CatFragment">
+
+    <!-- Variables for data binding -->
+    <data>
+        <variable
+            name="catFragment"
+            type="com.example.catgioncrawler.CatFragment" />
+
+        <variable
+            name="viewModel"
+            type="com.example.catgioncrawler.model.CatViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_view_cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/red_cat" />
+
+        <Button
+            android:id="@+id/action_one"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:text="HIT CAT"
+            app:layout_constraintBottom_toBottomOf="@id/action_two"
+            app:layout_constraintEnd_toStartOf="@id/action_two"
+            app:layout_constraintTop_toTopOf="@id/action_two" />
+
+        <TextView
+            android:id="@+id/cat_hp_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@{@string/cat_hp(viewModel.healthPoints)}"
+            app:layout_constraintBottom_toTopOf="@id/action_one"
+            app:layout_constraintStart_toStartOf="@id/action_one"
+            tools:text="Health Points" />
+
+        <Button
+            android:id="@+id/action_two"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="90dp"
+            android:text="ACTION 2"
+            android:onClick="@{() -> viewModel.healCat()}"
+            app:layout_constraintEnd_toEndOf="@id/image_view_cat"
+            app:layout_constraintStart_toStartOf="@id/image_view_cat"
+            app:layout_constraintTop_toBottomOf="@id/image_view_cat" />
+
+        <Button
+            android:id="@+id/action_three"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:text="ACTION 3"
+            app:layout_constraintBottom_toBottomOf="@id/action_two"
+            app:layout_constraintStart_toEndOf="@id/action_two"
+            app:layout_constraintTop_toTopOf="@id/action_two" />
+
+        <Button
+            android:id="@+id/map_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:text="MAP"
+            android:onClick="@{() -> catFragment.gotoMap()}"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

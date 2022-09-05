@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BattleFragment">
+
+    <!-- Variables for data binding -->
+    <data>
+
+        <variable
+            name="catFragment"
+            type="com.example.catgioncrawler.BattleFragment" />
+
+        <variable
+            name="catViewModel"
+            type="com.example.catgioncrawler.model.CatViewModel" />
+
+        <variable
+            name="enemyViewModel"
+            type="com.example.catgioncrawler.model.EnemyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_view_cat"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@id/cat_hp_bar"
+            app:layout_constraintStart_toStartOf="@id/cat_hp_bar"
+            tools:src="@drawable/red_cat" />
+
+        <TextView
+            android:id="@+id/cat_hp_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@{@string/cat_hp(catViewModel.healthPoints)}"
+            app:layout_constraintBottom_toTopOf="@id/cat_ap_bar"
+            app:layout_constraintStart_toStartOf="@id/cat_ap_bar"
+            tools:text="Health Points" />
+
+        <TextView
+            android:id="@+id/cat_ap_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="@{@string/cat_ap(catViewModel.abilityPoints)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Ability Points" />
+
+        <Button
+            android:id="@+id/hit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="HIT ENEMY"
+            app:layout_constraintBottom_toBottomOf="@+id/cat_ap_bar"
+            app:layout_constraintStart_toEndOf="@+id/cat_ap_bar"
+            app:layout_constraintTop_toTopOf="@+id/cat_ap_bar" />
+
+        <ImageView
+            android:id="@+id/image_view_enemy"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/blue_cat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/enemy_hp_bar"
+            app:layout_constraintTop_toBottomOf="@id/image_view_enemy"
+            app:layout_constraintEnd_toEndOf="@id/image_view_enemy"
+            android:text="@{@string/enemy_hp(enemyViewModel.healthPoints)}"
+            tools:text="Enemy Hp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

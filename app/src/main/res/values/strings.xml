@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Catgion Crawler</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Names for fragment's labels -->
+    <string name="fragment_cat">Cat Hub</string>
+
+    <!-- Names for cat parameters -->
+    <string name="cat_hp">Cat HP: %d</string>
+    <string name="cat_ap">Cat AP: %d</string>
+
+    <!-- Names for enemies parameters -->
+    <string name="enemy_hp">Enemy HP: %d</string>
+</resources>
