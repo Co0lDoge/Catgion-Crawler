@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/catFragment"
-        android:name="com.example.catgioncrawler.CatFragment"
+        android:name="com.example.catgioncrawler.fragment.CatFragment"
         android:label="@string/fragment_cat"
         tools:layout="@layout/fragment_cat" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/battleFragment"
-        android:name="com.example.catgioncrawler.BattleFragment"
+        android:name="com.example.catgioncrawler.fragment.BattleFragment"
         android:label="fragment_battle"
         tools:layout="@layout/fragment_battle" />
 </navigation>

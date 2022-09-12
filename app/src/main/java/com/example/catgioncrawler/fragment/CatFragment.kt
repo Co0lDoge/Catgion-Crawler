@@ -1,4 +1,4 @@
-package com.example.catgioncrawler
+package com.example.catgioncrawler.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.catgioncrawler.R
 import com.example.catgioncrawler.databinding.FragmentCatBinding
+
 import com.example.catgioncrawler.model.CatViewModel
 
 class CatFragment : Fragment() {

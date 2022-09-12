@@ -2,14 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".BattleFragment">
+    tools:context=".fragment.BattleFragment">
 
     <!-- Variables for data binding -->
     <data>
 
         <variable
             name="catFragment"
-            type="com.example.catgioncrawler.BattleFragment" />
+            type="com.example.catgioncrawler.fragment.BattleFragment" />
 
         <variable
             name="catViewModel"
