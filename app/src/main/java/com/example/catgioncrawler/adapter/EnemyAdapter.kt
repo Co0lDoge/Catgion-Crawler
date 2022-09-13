@@ -15,7 +15,7 @@ class EnemyAdapter(dataset: MutableList<Enemy>): ListAdapter<Enemy, EnemyAdapter
         TODO("Not yet implemented")
     }
 
-    override fun onBindViewHolder(holder: EnemyAdapter.EnemyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: EnemyViewHolder, position: Int) {
         TODO("Not yet implemented")
     }
 
