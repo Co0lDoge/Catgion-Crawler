@@ -4,7 +4,7 @@ import com.example.catgioncrawler.R
 
 class EnemySource {
 
-    // Currenty returns predetermined list of enemies
+    // Currently returns predetermined list of enemies
     // should return list based of parameters
     fun loadEnemies() : MutableList<Enemy> {
         return mutableListOf(
