@@ -60,7 +60,7 @@ class BattleFragment : Fragment() {
         binding.catImage.setImageResource(R.drawable.red_cat)
 
         binding.hitButton.setOnClickListener() {
-            //TODO hit choosed enemy
+            //TODO hit chosen enemy
         }
 
         // Changes enemy picture on death
