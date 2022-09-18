@@ -28,7 +28,7 @@ class BattleFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentBattleBinding.inflate(inflater, container, false)
         return binding.root
@@ -37,6 +37,8 @@ class BattleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Initiate Data of recyclerview
+        // TODO Move dataset to EnemyViewModel
         var enemyDataset = EnemySource().loadEnemies()
         binding.recyclerView.apply {
             adapter = EnemyAdapter(enemyDataset)

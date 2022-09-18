@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.catgioncrawler.R
 import com.example.catgioncrawler.data.Enemy
 import com.example.catgioncrawler.databinding.ListEnemyBinding
 
@@ -37,6 +36,8 @@ class EnemyAdapter(private val dataset: MutableList<Enemy>): ListAdapter<Enemy, 
             }
         }
     }
+
+    override fun getItemCount() = dataset.size
 
     companion object {
         private val DiffCallback = object : DiffUtil.ItemCallback<Enemy>() {
