@@ -20,7 +20,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/image_view_cat"
+            android:id="@+id/cat_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
@@ -59,9 +59,9 @@
             android:layout_marginTop="90dp"
             android:text="ACTION 2"
             android:onClick="@{() -> viewModel.healCat()}"
-            app:layout_constraintEnd_toEndOf="@id/image_view_cat"
-            app:layout_constraintStart_toStartOf="@id/image_view_cat"
-            app:layout_constraintTop_toBottomOf="@id/image_view_cat" />
+            app:layout_constraintEnd_toEndOf="@id/cat_image"
+            app:layout_constraintStart_toStartOf="@id/cat_image"
+            app:layout_constraintTop_toBottomOf="@id/cat_image" />
 
         <Button
             android:id="@+id/action_three"

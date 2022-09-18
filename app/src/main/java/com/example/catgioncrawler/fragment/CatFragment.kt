@@ -48,7 +48,7 @@ class CatFragment : Fragment() {
         binding.viewModel?.setupCat()
 
         // TODO: Maybe it would be better to move this to function
-        binding.imageViewCat.setImageResource(R.drawable.red_cat)
+        binding.catImage.setImageResource(R.drawable.red_cat)
 
         // Set listener for first button
         binding.actionOne.setOnClickListener { binding.viewModel?.healCat() }

@@ -48,7 +48,7 @@ class BattleFragment : Fragment() {
         binding.enemyViewModel?.setupEnemy()
 
         // TODO: Maybe it would be better to move this to function
-        binding.imageViewCat.setImageResource(R.drawable.red_cat)
+        binding.catImage.setImageResource(R.drawable.red_cat)
         binding.imageViewEnemy.setImageResource(R.drawable.blue_cat)
 
         binding.hitButton.setOnClickListener() {
