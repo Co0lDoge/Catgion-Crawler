@@ -58,16 +58,14 @@ class BattleFragment : Fragment() {
 
         // TODO: Maybe it would be better to move this to function
         binding.catImage.setImageResource(R.drawable.red_cat)
-        binding.imageViewEnemy.setImageResource(R.drawable.blue_cat)
 
         binding.hitButton.setOnClickListener() {
-            catModel.hitEnemy(enemyModel, damage = 1)
+            //TODO hit choosed enemy
         }
 
         // Changes enemy picture on death
         binding.enemyViewModel?.healthPoints?.observe(viewLifecycleOwner) {
-            if (enemyModel.healthPoints.value!! <= 0)
-                binding.imageViewEnemy.setImageResource(R.drawable.dead_actor)
+            //TODO observe enemies parameters
         }
     }
 }

@@ -8,12 +8,28 @@ class EnemySource {
     fun loadEnemies() : MutableList<Enemy> {
         return mutableListOf(
             Enemy(
-                "TestName",
+                "Axaris",
                 10,
                 10,
                 10,
                 10,
                 R.drawable.blue_cat
+            ),
+            Enemy(
+                "Notos",
+                10,
+                10,
+                10,
+                10,
+                R.drawable.red_cat
+            ),
+            Enemy(
+                "Metunos",
+                10,
+                10,
+                10,
+                10,
+                R.drawable.red_cat
             )
         )
     }
