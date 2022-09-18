@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.example.catgioncrawler.R
+import com.example.catgioncrawler.adapter.EnemyAdapter
 import com.example.catgioncrawler.data.EnemySource
 import com.example.catgioncrawler.databinding.FragmentBattleBinding
 import com.example.catgioncrawler.model.CatViewModel
@@ -36,8 +37,10 @@ class BattleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var dataset = EnemySource()
-        binding
+        var enemyDataset = EnemySource().loadEnemies()
+        binding.recyclerView.apply {
+            adapter = EnemyAdapter(enemyDataset)
+        }
 
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
