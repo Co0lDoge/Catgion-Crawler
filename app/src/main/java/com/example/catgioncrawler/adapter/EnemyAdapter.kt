@@ -1,5 +1,6 @@
 package com.example.catgioncrawler.adapter
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -8,22 +9,31 @@ import com.example.catgioncrawler.R
 import com.example.catgioncrawler.data.Enemy
 import com.example.catgioncrawler.databinding.ListEnemyBinding
 
-class EnemyAdapter(dataset: MutableList<Enemy>): ListAdapter<Enemy, EnemyAdapter.EnemyViewHolder>(DiffCallback) {
+class EnemyAdapter(private val dataset: MutableList<Enemy>): ListAdapter<Enemy, EnemyAdapter.EnemyViewHolder>(DiffCallback) {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): EnemyAdapter.EnemyViewHolder {
-        TODO("Not yet implemented")
+    ): EnemyViewHolder {
+        return EnemyViewHolder(
+            ListEnemyBinding.inflate(
+                LayoutInflater.from(
+                    parent.context)
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: EnemyViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind(dataset, position)
     }
 
     class EnemyViewHolder(private val binding: ListEnemyBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(enemy: Enemy) {
+        fun bind(
+            dataset: MutableList<Enemy>,
+            position: Int
+        ) {
             binding.apply {
-
+                enemyImage.setImageResource(dataset[position].drawableResourceId)
+                enemyName.text = (dataset[position].enemyName)
             }
         }
     }
@@ -37,8 +47,6 @@ class EnemyAdapter(dataset: MutableList<Enemy>): ListAdapter<Enemy, EnemyAdapter
             override fun areContentsTheSame(oldItem: Enemy, newItem: Enemy): Boolean {
                 return oldItem.enemyName == newItem.enemyName
             }
-
         }
     }
-
 }
