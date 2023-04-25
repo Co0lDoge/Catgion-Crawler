@@ -25,6 +25,6 @@ class EnemyViewModel : ViewModel() {
 
     fun takeDamage(damage: Int) {
         if (_healthPoints.value!! < _maxHealthPoints.value!!)
-        _healthPoints.value = _healthPoints.value?.minus(damage)
+            _healthPoints.value = _healthPoints.value?.minus(damage)
     }
 }
