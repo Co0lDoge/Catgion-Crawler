@@ -31,6 +31,6 @@ class CatViewModel: ViewModel() {
     // Fix Listener bindings
     fun healCat() {
         if (_healthPoints.value!! < _maxHealthPoints.value!!)
-        _healthPoints.value = _healthPoints.value?.plus(1)
+            _healthPoints.value = _healthPoints.value?.plus(1)
     }
 }
