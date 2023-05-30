@@ -1,10 +1,11 @@
 Game with cat and them battling. <br /> Early version that will probaly never be finished.
-![image](https://github.com/Co0lDoge/catgion_crawler/assets/89445763/e95636ba-af13-4837-84a2-aebe0abc1c4a)
+![image](https://github.com/Co0lDoge/Catgion-Crawler/assets/89445763/76207666-0300-44d1-bb1e-6df828433060)
+
 Current features: <br />
   Ability to heal cat. <br />
   Go to battle screen. <br />
   
-![image](https://github.com/Co0lDoge/catgion_crawler/assets/89445763/9ebca167-5d4a-410d-9810-0ffa2f9beb93)
+![image](https://github.com/Co0lDoge/Catgion-Crawler/assets/89445763/fb6a4874-9409-448b-9934-f0db25692c8f)
 
 To be implemented: <br />
   Cat fatigue. <br />
