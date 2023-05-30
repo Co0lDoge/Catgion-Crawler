@@ -17,6 +17,10 @@
     <fragment
         android:id="@+id/battleFragment"
         android:name="com.example.catgioncrawler.fragment.BattleFragment"
-        android:label="fragment_battle"
-        tools:layout="@layout/fragment_battle" />
+        android:label="@string/fragment_battle"
+        tools:layout="@layout/fragment_battle" >
+        <action
+            android:id="@+id/action_battleFragment_to_catFragment"
+            app:destination="@id/catFragment" />
+    </fragment>
 </navigation>

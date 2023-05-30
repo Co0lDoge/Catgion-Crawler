@@ -5,6 +5,7 @@
 
     <!-- Names for fragment's labels -->
     <string name="fragment_cat">Cat Hub</string>
+    <string name="fragment_battle">Battle Arena</string>
 
     <!-- Names for cat parameters -->
     <string name="cat_hp">Cat HP: %d</string>
